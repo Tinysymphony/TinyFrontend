@@ -3,10 +3,12 @@ $(document).ready(function(){
 	if($(document).width() > 1000){
 		$("#editorBoard").css("width", "90%");
 		$("#editorBar").css("width", "10%");
+		$(".segment").css("font-size", "180%");
 	} 
 	else{
 		$("#editorBoard").css("width", "80%");
-		$("#editorBar").css("width", "20%");		
+		$("#editorBar").css("width", "20%");
+		$(".segment").css("font-size", "80%");	
 	}
 
 	$("#fun1").click(function(){
@@ -51,15 +53,22 @@ $(document).ready(function(){
 		$("#show").animate({opacity:'0.2'},"slow");
 	});
 
+	$("#appendNew").click(function(){
+		var newsegment = "<div class='segment'>Appended</div>";
+		$("#segmentHolder").append(newsegment);
+	});
+
 });
 
 $(window).resize(function(){
 	if($(document).width() > 1000){
 		$("#editorBoard").css("width", "90%");
 		$("#editorBar").css("width", "10%");
+		$(".segment").css("font-size", "180%");
 	} 
 	else{
 		$("#editorBoard").css("width", "80%");
-		$("#editorBar").css("width", "20%");		
+		$("#editorBar").css("width", "20%");
+		$(".segment").css("font-size", "80%");	
 	}
 });

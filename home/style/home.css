@@ -1,3 +1,14 @@
+button {
+	text-align: center;
+	text-shadow: none;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+	cursor: pointer;
+	align-items: flex-start;
+	box-sizing: border-box;
+}
+
 div {
 	display: block;
 }
@@ -32,27 +43,6 @@ div #editor {
 	z-index: 20
 }
 
-div #editorBoard {
-	position: relative;
-	float: left;
-	left: 0px;
-	width: 85%;
-	height: 100%;
-	background-color: #00aabb;
-	overflow: auto;
-	z-index: 45;
-}
-
-div	#editorBar {
-	position: relative;
-	float: left;
-	left: 0px;
-	width: 15%;
-	height: 100%;
-	z-index: 44;
-}
-
-
 div #result {
 	position: absolute;
 	float: left;
@@ -64,28 +54,7 @@ div #result {
 	z-index: 19
 }
 
-#footer {
-	position: fixed;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	width: 100%;
-	height: 30px;
-	background-color: black;
-	text-align: left;
-	z-index: 10000;
-}
-
-button {
-	text-align: center;
-	text-shadow: none;
-	letter-spacing: normal;
-	word-spacing: normal;
-	display: inline-block;
-	cursor: pointer;
-	align-items: flex-start;
-	box-sizing: border-box;
-}
+/*topBar*/
 
 .topText {
 	float: left;
@@ -101,7 +70,6 @@ button {
 	height: 100%;
 	opacity: 0.8;
 }
-
 
 .mainLink {
 	transition-property: width,height,background,margin,border,padding;
@@ -121,8 +89,6 @@ button {
 	margin-left: 0px;
 	cursor: pointer;
 }
-
-
 
 .shareMenu {
 	transition-property: width,height,background,margin,border,padding;
@@ -162,20 +128,80 @@ button {
 	-webkit-border-radius: 0;
 }
 
+/*editorPart*/
+
+div #editorBoard {
+	position: relative;
+	float: left;
+	left: 0px;
+	width: 85%;
+	height: 100%;
+	background-color: #00aabb;
+	overflow: auto;
+	z-index: 45;
+}
+
+div	#editorBar {
+	position: relative;
+	float: left;
+	left: 0px;
+	width: 15%;
+	height: 100%;
+	z-index: 44;
+}
+
+div #segmentHolder {
+	position: relative;
+	float: block;
+	left: 0px;
+	right: 0px;
+	margin-top: 10%;
+	margin-bottom: 20%;
+	overflow: auto;
+}
+
 .segment {
 	position: relative;
 	float: block;
-	top: 20px;
-	padding: 20px 10%;
+	padding: 2% 4%;
 	margin-top: 25px;
 	margin-left: 15%;
 	margin-right: 15%;
 	outline: none;
-	font-size: 200%;
+	font-size: 180%;
 	background-color: #fff;
 	z-index: 50;
 }
 
+.segmentElement {
+	position: relative;
+	float: block;
+	width: 100%;
+	padding: 1%;
+	left: 0;
+}
+
+.segmentTitle {
+	height: 20%;
+	background-color: #eee;
+	z-index: 57;
+}
+
+.segmentContent {
+	margin-top: 2%;
+	height: 70%;
+	background-color: #aaa;
+	z-index: 55;
+}
+
+.segmentAppend {
+	margin-top: 2%;
+	height: 10%;
+	background-color: #ddd;
+	z-index: 60;
+}
+
+/*middleBar*/
 
 .barButton {
 	position: relative; 
@@ -187,6 +213,10 @@ button {
 	z-index: 40;
 }
 
+#appendNew {
+	background-color: #007ea0;
+}
+
 #show {
 	background-color: #444444;
 	opacity: 0.2;
@@ -194,6 +224,19 @@ button {
 
 #hide {
 	background-color: #444444;
+}
+
+/*footBar*/
+#footer {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	text-align: left;
+	z-index: 10000;
 }
 
 /*scrollbar*/
