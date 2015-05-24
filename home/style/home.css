@@ -1,0 +1,218 @@
+div {
+	display: block;
+}
+
+div #root {
+	position: relative;
+	margin: 0 auto;
+}
+
+div #head {
+	position: fixed;
+	height: 50px;
+	font-size: 100%;
+	background-color: black;
+	cursor: default;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+}
+
+div #editor {
+	position: absolute;
+	float: left;
+	left: 0px;
+	top: 50px;
+	height: 100%;
+	width: 40%;
+	padding-left: 0px;
+	background-color: #00ffff;
+	overflow: auto;
+	z-index: 20
+}
+
+div #editorBoard {
+	position: relative;
+	float: left;
+	left: 0px;
+	width: 85%;
+	height: 100%;
+	background-color: #00aabb;
+	overflow: auto;
+	z-index: 45;
+}
+
+div	#editorBar {
+	position: relative;
+	float: left;
+	left: 0px;
+	width: 15%;
+	height: 100%;
+	z-index: 44;
+}
+
+
+div #result {
+	position: absolute;
+	float: left;
+	right: 0px;
+	top:50px;
+	height: 100%;
+	width: 60%;
+	background-color: #e0ffff;
+	z-index: 19
+}
+
+#footer {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	text-align: left;
+	z-index: 10000;
+}
+
+button {
+	text-align: center;
+	text-shadow: none;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+	cursor: pointer;
+	align-items: flex-start;
+	box-sizing: border-box;
+}
+
+.topText {
+	float: left;
+	padding-top: 9px;
+}
+
+.tinyBlock {
+	float: left;
+	border-left: 1px solid #fff;
+		border-left-width: 1px;
+		border-left-style: solid;
+		border-left-color: rgb(255,255,255);
+	height: 100%;
+	opacity: 0.8;
+}
+
+
+.mainLink {
+	transition-property: width,height,background,margin,border,padding;
+	transition-duration: .25s;
+	background-color: rgb(106,76,156);
+	position: relative;
+	padding: 0px 20px;
+		padding-top: 0px;
+		padding-right: 20px;
+		padding-bottom: 0px;
+		padding-left: 20px;
+	height: 50px;
+	float: left;
+	color: #fff;
+	text-decoration: none;
+	font-size: 180%;
+	margin-left: 0px;
+	cursor: pointer;
+}
+
+
+
+.shareMenu {
+	transition-property: width,height,background,margin,border,padding;
+	transition-duration: .25s;
+	background-color: rgb(106,76,156);
+	color: #fff;
+	float: left;																			
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 100%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 100%;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+.activeTinyLink: {
+
+}
+
+.headButton {
+	transition-property: width,height,background,margin,border,padding;
+	transition-duration: .25s;
+	font-size: 100%;
+	color: #fff;
+	margin: 0px;
+	margin-left: 1;
+	outline: none;
+	background: none;
+	border: none;
+	height: 100%;
+	padding: 0px 14px;
+	align-items: flex-start;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+.segment {
+	position: relative;
+	float: block;
+	top: 20px;
+	padding: 20px 10%;
+	margin-top: 25px;
+	margin-left: 15%;
+	margin-right: 15%;
+	outline: none;
+	font-size: 200%;
+	background-color: #fff;
+	z-index: 50;
+}
+
+
+.barButton {
+	position: relative; 
+	float: block;
+	left: 0px;
+	width: 100%;
+	height: 160px;
+	cursor: pointer;
+	z-index: 40;
+}
+
+#show {
+	background-color: #444444;
+	opacity: 0.2;
+}
+
+#hide {
+	background-color: #444444;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+		  width: 15px;
+} /*default*/
+
+::-webkit-scrollbar-track {
+		  background-color: #00eedd;
+} /* 滚动条的滑轨背景颜色 */
+
+::-webkit-scrollbar-thumb {
+	  background-color: rgba(0, 0, 0, 0.2); 
+} /* 滑块颜色 */
+
+::-webkit-scrollbar-button {
+	  background-color: #00eecc;
+} /* 滑轨两头的监听按钮颜色 */
+
+::-webkit-scrollbar-corner {
+	  background-color: black;
+} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
