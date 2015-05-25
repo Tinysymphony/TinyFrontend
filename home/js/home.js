@@ -76,7 +76,7 @@ $(document).ready(function(){
 	});
 
 	$("#appendNew").click(function(){
-		var newSegment = "<div id='tt' class='Segment'>Appended</div>";
+		var newSegment = "<div class='Segment'>Appended</div>";
 		$("#SegmentHolder").append(newSegment);
 
 		var container = $("#editorBoard");
