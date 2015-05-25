@@ -272,6 +272,10 @@ div #SegmentHolder {
 	background-color: #007ea0;
 }
 
+#toTop {
+	background-color: #79CDCD;
+}
+
 #show {
 	background-color: #444444;
 	opacity: 0.2;
