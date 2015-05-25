@@ -128,6 +128,14 @@ div #result {
 	-webkit-border-radius: 0;
 }
 
+.HeadButtonText{
+	position: relative;
+	display: inline-block;
+	outline: none;
+	font-size: 100%;
+	color: #fff;
+}
+
 /*editorPart*/
 
 div #editorBoard {
@@ -147,6 +155,7 @@ div	#editorBar {
 	left: 0px;
 	width: 15%;
 	height: 100%;
+	overflow: hidden;
 	z-index: 44;
 }
 
@@ -155,7 +164,7 @@ div #SegmentHolder {
 	float: block;
 	left: 0px;
 	right: 0px;
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-bottom: 20%;
 	overflow: auto;
 }
@@ -180,7 +189,6 @@ div #SegmentHolder {
 	position: relative;
 	float: block;
 	width: 100%;
-	padding: 1%;
 	left: 0;
 }
 
@@ -194,36 +202,57 @@ div #SegmentHolder {
 	position: relative;
 	margin-top: 2%;
 	height: 100%;
-	background-color: #fff;
+	background-color: none;
 	z-index: 55;
 	overflow: hidden;
-
 }
 
 .Pic {
+	position: absolute;
 	float: left;
-	height: 80px;
+	height: 100%;
 	width: 24%;
 	left: 0px;
-	background-color: #aaa;
+	cursor: pointer;
+	background-color: #eee;
 	z-index: 56;
 }
 
 .TextContent {
-	margin-left: 2%;
+	position: relative;
 	float: left;
-	/*height: auto!important;*/
-	height: 80px;
+	margin-left: 26%;
+	height: auto;
 	width: 74%;
-	left: 0px;
-	background-color: #aaa;
+	background-color: #eee;
+	text-align: left;
+	line-height: 100%;
 	z-index: 56;
+
+	box-shadow: none;
+
+}
+
+.TextInput {
+	position: relative;
+	overflow: none;
+	padding: 2%;
+	height: auto!important;
+	min-height: 50px;
+	width: 90%;
+	padding-right: 5%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	cursor: auto;
+
+	z-index: 59;
 }
 
 .SegmentAppend {
 	margin-top: 2%;
 	height: 10%;
-	background-color: #ddd;
+	background-color: #eee;
+	font-size: 80%;
 	z-index: 60;
 }
 
