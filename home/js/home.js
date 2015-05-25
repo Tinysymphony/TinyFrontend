@@ -1,40 +1,57 @@
 
+var barFontSize = "180%";
+
 $(document).ready(function(){
+
+
 	if($(document).width() > 1000){
 		$("#editorBoard").css("width", "90%");
 		$("#editorBar").css("width", "10%");
-		$(".segment").css("font-size", "180%");
+		$(".Segment").css("font-size", "180%");
 	} 
 	else{
 		$("#editorBoard").css("width", "80%");
 		$("#editorBar").css("width", "20%");
-		$(".segment").css("font-size", "80%");	
+		$(".Segment").css("font-size", "80%");	
 	}
 
 	$("#fun1").click(function(){
-		alert($(window).width());
-		alert($(window).height());
-		alert($(document).width());
+		// alert($(window).width());
+		// alert($(window).height());
+		// alert($(document).width());
+		// $("#editorBoard").scroll();
+
 	});
 
-	$(".headButton").mouseover(function(){
+	// $("#editorBoard").mousewheel(function(event) {
+	//     console.log(event.deltaX, event.deltaY, event.deltaFactor);
+	// 	if(event.deltaY < 0){
+	// 		$("#SegmentHolder").animate({top:'-=20%'}, 50);
+	// 	}
+	// 	else{
+	// 		$("#SegmentHolder").animate({top:'+=20%'}, 50);
+	// 	}
+	// });
+
+
+	$(".HeadButton").mouseover(function(){
 		$(this).css("background-color", "#333333");
 	});
-	$(".headButton").mouseleave(function(){
+	$(".HeadButton").mouseleave(function(){
 		$(this).css("background-color", "black");
 	});
 
-	$(".mainLink").mouseover(function(){
+	$(".MainLink").mouseover(function(){
 		$(this).css("background-color", "rgb(138,107,190)");
 	});
-	$(".mainLink").mouseleave(function(){
+	$(".MainLink").mouseleave(function(){
 		$(this).css("background-color", "rgb(106,76,156)");
 	});
 
-	$(".shareMenu").mouseover(function(){
+	$(".ShareMenu").mouseover(function(){
 		$(this).css("background-color", "rgb(138,107,190)");
 	});
-	$(".shareMenu").mouseleave(function(){
+	$(".ShareMenu").mouseleave(function(){
 		$(this).css("background-color", "rgb(106,76,156)");
 	});
 
@@ -54,21 +71,34 @@ $(document).ready(function(){
 	});
 
 	$("#appendNew").click(function(){
-		var newsegment = "<div class='segment'>Appended</div>";
-		$("#segmentHolder").append(newsegment);
+		var newSegment = "<div id='tt' class='Segment'>Appended</div>";
+		$("#SegmentHolder").append(newSegment);
+
+		var container = $("#editorBoard");
+		scrollTo = $('#SegmentHolder').children(":last"); 
+		scrollTo.css("font-size", barFontSize);
+		container.animate({
+    		scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+    	});
+
 	});
 
 });
 
 $(window).resize(function(){
 	if($(document).width() > 1000){
+		barFontSize = "180%";
+
 		$("#editorBoard").css("width", "90%");
 		$("#editorBar").css("width", "10%");
-		$(".segment").css("font-size", "180%");
+		$(".Segment").css("font-size", "180%");
 	} 
 	else{
+		barFontSize = "80%";
 		$("#editorBoard").css("width", "80%");
 		$("#editorBar").css("width", "20%");
-		$(".segment").css("font-size", "80%");	
+		$(".Segment").css("font-size", "80%");	
 	}
 });
+
+

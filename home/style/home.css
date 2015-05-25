@@ -56,12 +56,12 @@ div #result {
 
 /*topBar*/
 
-.topText {
+.TopText {
 	float: left;
 	padding-top: 9px;
 }
 
-.tinyBlock {
+.TinyBlock {
 	float: left;
 	border-left: 1px solid #fff;
 		border-left-width: 1px;
@@ -71,7 +71,7 @@ div #result {
 	opacity: 0.8;
 }
 
-.mainLink {
+.MainLink {
 	transition-property: width,height,background,margin,border,padding;
 	transition-duration: .25s;
 	background-color: rgb(106,76,156);
@@ -90,7 +90,7 @@ div #result {
 	cursor: pointer;
 }
 
-.shareMenu {
+.ShareMenu {
 	transition-property: width,height,background,margin,border,padding;
 	transition-duration: .25s;
 	background-color: rgb(106,76,156);
@@ -107,11 +107,11 @@ div #result {
 	-webkit-border-radius: 0;
 }
 
-.activeTinyLink: {
+.ActiveTinyLink: {
 
 }
 
-.headButton {
+.HeadButton {
 	transition-property: width,height,background,margin,border,padding;
 	transition-duration: .25s;
 	font-size: 100%;
@@ -150,7 +150,7 @@ div	#editorBar {
 	z-index: 44;
 }
 
-div #segmentHolder {
+div #SegmentHolder {
 	position: relative;
 	float: block;
 	left: 0px;
@@ -160,20 +160,23 @@ div #segmentHolder {
 	overflow: auto;
 }
 
-.segment {
+.Segment {
 	position: relative;
-	float: block;
 	padding: 2% 4%;
 	margin-top: 25px;
+	margin-bottom: 10px;
 	margin-left: 15%;
 	margin-right: 15%;
 	outline: none;
 	font-size: 180%;
 	background-color: #fff;
+	box-shadow: 4px 4px 15px 1px #444;
 	z-index: 50;
+	height: auto!important;
+	min-height: 80px;
 }
 
-.segmentElement {
+.SegmentElement {
 	position: relative;
 	float: block;
 	width: 100%;
@@ -181,20 +184,43 @@ div #segmentHolder {
 	left: 0;
 }
 
-.segmentTitle {
+.SegmentTitle {
 	height: 20%;
 	background-color: #eee;
 	z-index: 57;
 }
 
-.segmentContent {
+.SegmentContent {
+	position: relative;
 	margin-top: 2%;
-	height: 70%;
-	background-color: #aaa;
+	height: 100%;
+	background-color: #fff;
 	z-index: 55;
+	overflow: hidden;
+
 }
 
-.segmentAppend {
+.Pic {
+	float: left;
+	height: 80px;
+	width: 24%;
+	left: 0px;
+	background-color: #aaa;
+	z-index: 56;
+}
+
+.TextContent {
+	margin-left: 2%;
+	float: left;
+	/*height: auto!important;*/
+	height: 80px;
+	width: 74%;
+	left: 0px;
+	background-color: #aaa;
+	z-index: 56;
+}
+
+.SegmentAppend {
 	margin-top: 2%;
 	height: 10%;
 	background-color: #ddd;
@@ -203,7 +229,7 @@ div #segmentHolder {
 
 /*middleBar*/
 
-.barButton {
+.BarButton {
 	position: relative; 
 	float: block;
 	left: 0px;
@@ -259,3 +285,4 @@ div #segmentHolder {
 ::-webkit-scrollbar-corner {
 	  background-color: black;
 } /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
