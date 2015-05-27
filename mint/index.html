@@ -8,14 +8,18 @@
 		<style type="text/css">
 		</style>
 		<link rel="shortcut icon" href="./ico/mint.ico"> 
-		<link rel="stylesheet" type="text/css" href="./style/component.css" />
+		<link rel="stylesheet" type="text/css" href="./style/mint.css" />
+		<link rel="stylesheet" type="text/css" href="./style/input.css" />
 		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
-		<script src="./js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="./js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="./js/mint.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<div id="head">
-				<h1 id="title" class="Mint" text-align="center">TinyMint</h1>
+			<div id="titleLine">
+				<div id="head">
+					<h1 id="title" class="Mint" text-align="center">TinyMint</h1>
+				</div>
 			</div>
 			<div id="bl-main" class="bl-main">
 				<section id="about">
@@ -24,7 +28,7 @@
 					</div>
 					<div class="bl-content">
 						<h2>About TinyMint</h2>
-						<p>TinyMint is a curriculum work of ZJU B/S Web Design. TinyMint is designed to help users to create their own responsive webpages by integrated templates. Users can easily design and download HTML/CSS/JavaScript from the online webpage editor. Mint is inspired by MS Sway and is trying to provide users a better UE. The Mint home page is using full screen layout from Codrops. <br>Web Designer : WyTiny</p>
+						<p>TinyMint is a curriculum work of ZJU B/S Web Design. which is designed to help users to create their own responsive webpages by integrated templates. Users can easily design and download HTML/CSS/JavaScript from the online webpage editor. Mint is inspired by MS Sway and is trying to provide users a better UE. The Mint home page is using full screen layout from Codrops. <br>Web Designer : WyTiny</p>
 					</div>
 					<span class="MintIcon CloseButton"></span>
 				</section>
@@ -32,9 +36,68 @@
 					<div class="box">
 						<h2 class="MintIcon MintIconStart">Start</h2>
 					</div>
-					<div class="bl-content">
+					<div id="login" class="UserInput bl-content">
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="text" id="username1" />
+							<label class="input__label input__label--kaede" for="username1">
+								<span class="input__label-content input__label-content--kaede">User Name</span>
+							</label>
+						</span>
 
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="password" id="password1" />
+							<label class="input__label input__label--kaede" for="password1">
+								<span class="input__label-content input__label-content--kaede">Password</span>
+							</label>
+						</span>
+
+						<span class="input input--kaede">
+							<label class="input__label input__label--kaede">
+								<div class="SubmitInput">
+									<span class="input__label-content input__label-content--kaede">Log in</span>
+								</div>
+							</label>
+						</span>
+						<div>
+							<a id="turnToRegister">Need an account? Sign in > </a>
+						</div>
 					</div>
+					<div id="signin" class="UserInput">
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="text" id="username2" />
+							<label class="input__label input__label--kaede" for="username2">
+								<span class="input__label-content input__label-content--kaede">User Name</span>
+							</label>
+						</span>
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="text" id="email" />
+							<label class="input__label input__label--kaede" for="email">
+								<span class="input__label-content input__label-content--kaede">Email</span>
+							</label>
+						</span>
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="password" id="password2" />
+							<label class="input__label input__label--kaede" for="password2">
+								<span class="input__label-content input__label-content--kaede">Password</span>
+							</label>
+						</span>
+						<span class="input input--kaede">
+							<input class="input__field input__field--kaede" type="password" id="password3" />
+							<label class="input__label input__label--kaede" for="password3">
+								<span class="input__label-content input__label-content--kaede">Reinput Password</span>
+							</label>
+						</span>
+						<span class="input input--kaede">
+							<label class="input__label input__label--kaede">
+								<div class="SubmitInput">
+									<span class="input__label-content input__label-content--kaede">Submit</span>
+								</div>
+							</label>
+						</span>
+						<div>
+							<a id="turnToLogin"> < Back to Log in Page</a>
+						</div>
+					</div>					
 					<span class="MintIcon CloseButton"></span>
 				</section>
 				<section id="doc">
