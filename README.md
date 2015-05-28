@@ -1,15 +1,22 @@
-##TinyMint
+##TinyFrontend
 
 -----
 
-> Wy-Tiny 24/05/2015  B/S Design Work 
+> WyTiny Begins at 24/05/2015 
 
 -----
 
-####About TinyMint
-TinyMint is an online webpage builder.
-Using the provided templates and graphical Interfaces, users can easily design a webpage with custom pictures, articles and multimedias.
-It's inspired by MS Sway and the initial UI of TinyMint is similar to Sway, yet in later versions TinyMint would be equiped with more auxiliary functions and tools to bring a brilliant experience to users.
+####About TinyFrontend
 
-####On Maintains
+I' becoming quit insterested in Web Frontend Develop, though the most tough point of FE is Compatibility Testing. I must acknowledge that I always consider things from the perspective of appearance rather than practicability. 
 
+I wanna try to be a brilliant web designer of both frontend and backend. It's better late than never. All of my frontend works will be pushed here. 
+
+On the early stage of my learning, some of them would have drawn lessons from other designers' works, some of them combines and instantiates serveral ideas. 
+This period is supposed to be filled with imitation.
+
+I'd like to design and share my own works when I'm able to express my ideas using frontend techs.
+
+-----
+
+###<center>keep moving</center>###
