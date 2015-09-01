@@ -112,6 +112,39 @@ a#title:after { content: "®";
   text-align: center;
 }
 
+#owlSection {
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+#owlPictures {
+}
+
+#carousel {
+  display: block;
+}
+
+#carousel .owl-wrapper-outer {
+  display: block;
+}
+
+#carousel .owl-wrapper {
+  display: inline-block;
+}
+
+#carousel .owl-item {
+  margin: 5px;
+}
+
+#carousel div.owl-item img {
+  float: left;
+  display: block;
+  width: 360px;
+  height: 200px;
+}
+
 .Song {
   margin-left: 10%;
   margin-right: 10%;
@@ -162,6 +195,7 @@ a#title:after { content: "®";
 }
 
 footer {
+  /*opacity: 0;*/
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;

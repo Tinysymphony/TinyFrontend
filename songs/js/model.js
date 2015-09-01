@@ -1,3 +1,82 @@
+/* Owl Pictures */
+
+var ControlDot = React.createClass({
+  render: function() {
+    return (
+      <div className="owl-dot">
+        <span></span>
+      </div>
+    );
+  }
+});
+
+var ControlBar = React.createClass({
+  render: function() {
+    return (
+      <div className="owl-controls">
+        <ControlDot />
+        <ControlDot />
+        <ControlDot />
+      </div>
+    );
+  }
+});
+
+var PicutreItem = React.createClass({
+  render: function() {
+    return (
+      <div className="owl-item">
+        <div className="item"><img src={this.props.src} /></div>
+      </div>
+    );
+  }
+});
+
+var PicturesBar = React.createClass({
+  render: function() {
+    var pics = this.props.pics;
+    return (
+      <div className="owl-wrapper-outer">
+        <div className="owl-wrapper">
+          {
+            pics.map(function(item){
+              return <PicutreItem src={item.src} />
+            })
+          }
+        </div>
+      </div>
+    );
+  }
+});
+
+var OwlPictures = React.createClass({
+  render: function() {
+    return (
+      <div className="row">
+        <div id="carousel" className="owl-carousel owl-theme">
+          <PicturesBar pics={this.props.pics} />
+          <ControlBar />
+        </div>
+      </div>
+    );
+  }
+});
+
+var list = [
+  {name: "HI", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg"},
+  {name: "JT", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicbb.jpg"},
+  {name: "AF", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicaa.jpg"},
+  {name: "CG", src:"http://7xjgb0.com1.z0.glb.clouddn.com/mongo-insert.png"},
+  {name: "ER", src:"http://7xjgb0.com1.z0.glb.clouddn.com/mongoindex.png"}
+];
+
+React.render(
+  <OwlPictures pics={list} />,
+  document.getElementById("owlSection")
+);
+
+/* SongList */
+
 var layzr = "http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicrin.jpg";
 
 var InfoList = React.createClass({
@@ -82,7 +161,7 @@ React.render(
   document.getElementById("topList")
 );
 
-/////////////////////////////////////////////
+/* Footer */
 
 var FooterMenu = React.createClass({
   render: function() {

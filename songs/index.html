@@ -10,11 +10,14 @@
         <link href='https://fonts.lug.ustc.edu.cn/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
         <!-- // <script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js" charset="utf-8"></script>
         // <script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.2.2/backbone-min.js" charset="utf-8"></script> -->
-        <script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
+        <script src="http://cdn.bootcss.com/react/0.14.0-beta3/JSXTransformer.js"></script>
         <script type="text/javascript" src="http://cdn.bootcss.com/react/0.14.0-beta3/react.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/owl-carousel/1.32/owl.theme.min.css" media="screen" title="no title" charset="utf-8">
         <script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js" charset="utf-8"></script>
         <!-- // <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script> -->
         <script type="text/javascript" src="http://cdn.bootcss.com/layzr.js/1.4.3/layzr.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.min.js"></script>
         <link rel="stylesheet" href="css/back.css" media="screen" charset="utf-8">
     </head>
     <body>
@@ -36,13 +39,14 @@
                 </ul>
             </nav>
         </header>
-        <div class="contents">
+        <section id="owlSection"></section>
+        <section id="mainSection">
             <div class=“TinyRow”>
                 <div id="topList"></div>
                 <div class="row">
                 </div>
             </div>
-        </div>
+        </section>
         <footer id="footer">
           <div class="container">
               <div class="row">
@@ -62,7 +66,16 @@
             window.onload = function() {
               var layzr = new Layzr({
               });
+              // document.querySelector(".owl-item:first-child").className += " active";
             }
+            $(document).ready(function() {
+              $("#carousel").owlCarousel({
+                autoPlay: 3000,
+                items: 3,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+              });
+            });
         </script>
     </body>
 </html>
