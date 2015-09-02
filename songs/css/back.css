@@ -18,6 +18,12 @@ h2 {
     font-family: 'Cuprum', sans-serif !important;
 }
 
+div, img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 nav.top {
     height: 45px;
     line-height: 45px;
@@ -65,7 +71,7 @@ a#title {
     transition: 0.5s;
 }
 
-a#title:after { content: "®";
+a#title:after { content: '®';
     margin-left: 7px;
     vertical-align: top;
     font-size: 0.4em;
@@ -116,45 +122,29 @@ a#title:after { content: "®";
   margin-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
-
-}
-
-#owlPictures {
-}
-
-#carousel {
-  display: block;
-}
-
-#carousel .owl-wrapper-outer {
-  display: block;
-}
-
-#carousel .owl-wrapper {
-  display: inline-block;
 }
 
 #carousel .owl-item {
   margin: 5px;
 }
 
-#carousel div.owl-item img {
-  float: left;
+#carousel img {
   display: block;
-  width: 360px;
-  height: 200px;
+  width: 220px;
+  height: 130px;
 }
 
 .Song {
-  margin-left: 10%;
-  margin-right: 10%;
   margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid #EF00EF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   font-size: 1.5em;
   background-color: #EDEDC0;
   transition: 0.5s;
-  width: 80%;
+  width: 100%;
 }
 
 .CDPic {

@@ -18,13 +18,16 @@
         <!-- // <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script> -->
         <script type="text/javascript" src="http://cdn.bootcss.com/layzr.js/1.4.3/layzr.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="http://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.min.js"></script>
-        <link rel="stylesheet" href="css/back.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="css/back.css" media="screen" title="no title" charset="utf-8">
+        <!-- // <script type="text/javascript" src="assets/bundle.js" charset="utf-8"></script> -->
     </head>
     <body>
         <header id="header">
             <nav class="top">
-                <a>Webpage Designer -- Tinysymphony</a>
-                <ul class="clock"><li><a></a></li></ul>
+                <div class="">
+                    <a>Webpage Designer -- Tinysymphony</a>
+                    <ul class="clock"><li><a></a></li></ul>
+                </div>
             </nav>
             <nav class="main">
                 <a id="title">TinyMint<a>
@@ -39,43 +42,34 @@
                 </ul>
             </nav>
         </header>
-        <section id="owlSection"></section>
-        <section id="mainSection">
-            <div class=“TinyRow”>
-                <div id="topList"></div>
-                <div class="row">
-                </div>
+        <section id="owlSection">
+          <!-- <div class="container">
+            <div class="row">
+              <div id="carousel" class="owl-carousel">
+                <div class="item"><img src="http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg" alt="" /></div>
+                <div class="item"><img src="http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg" alt="" /></div>
+                <div class="item"><img src="http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg" alt="" /></div>
+                <div class="item"><img src="http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg" alt="" /></div>
+                <div class="item"><img src="http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg" alt="" /></div>
+              </div>
             </div>
+          </div> -->
+        </section>
+        <section id="mainSection">
+            <div id="topList"></div>
+            <div class="row"></div>
         </section>
         <footer id="footer">
           <div class="container">
               <div class="row">
-                  <div class="col-md-8" id="menusContainer">
-
-                  </div>
-                  <div class="col-md-4">
-
-                  </div>
+                  <div class="col-md-8" id="menusContainer"></div>
+                  <div class="col-md-4"></div>
               </div>
               <p class="copy">Copyright (c) 2014 Copyright Holder All Rights Reserved.</p>
           </div>
         </footer>
-        <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
-        <script type="text/jsx" src="js/model.js" charset="utf-8"></script>
-        <script type="text/javascript">
-            window.onload = function() {
-              var layzr = new Layzr({
-              });
-              // document.querySelector(".owl-item:first-child").className += " active";
-            }
-            $(document).ready(function() {
-              $("#carousel").owlCarousel({
-                autoPlay: 3000,
-                items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3]
-              });
-            });
-        </script>
+        <!-- // <script type="text/jsx" src="js/index.js" charset="utf-8"></script> -->
+        <!-- // <script src="assets/min.bundle.js" charset="utf-8"></script> -->
+        <script src="assets/index.bundle.js" charset="utf-8"></script>
     </body>
 </html>

@@ -10,3 +10,8 @@ function syncClock() {
     }
 }
 setTimeout(syncClock, 500);
+
+window.onload = function() {
+  var layzr = new Layzr({
+  });
+}
