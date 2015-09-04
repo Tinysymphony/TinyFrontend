@@ -15,4 +15,3 @@ new WebpackDevServer(webpack(config), {
     }
     console.log('Start webpack server at port ' + port);
 });
-

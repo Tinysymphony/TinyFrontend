@@ -1,0 +1,222 @@
+/* basic style */
+
+@mixin roundBorder($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$mainBlack: #333;
+body, p, a, h2, h3, h4, h5, h6 {
+    font-family: 'Cuprum', sans-serif;
+    color: $mainBlack;
+}
+
+ul > li {
+    list-style: none;
+    transition: 0.5s
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+div, img {
+  @include roundBorder();
+}
+
+/* navigation */
+
+nav.top {
+  height: 45px;
+  line-height: 45px;
+  background-color: #FFF;
+  padding-left: 60px;
+  padding-right: 60px;
+  a {
+    font-size: 25px;
+    color: #CCC;
+    transition: 0.5s;
+    &:hover {
+      color: #C26969;
+    }
+  }
+  h2 {
+    font-family: 'Cuprum', sans-serif !important;
+  }
+  ul.clock {
+    float: right;
+    line-height: 45px;
+    a {
+      font-family: 'Ubuntu Mono';
+    }
+  }
+}
+
+nav.main {
+  height: 65px;
+  background-color: #DDD;
+  padding-left: 30px;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: #CCC;
+  li:hover {
+    background-color: #EEE;
+    cursor: pointer;
+  }
+}
+
+
+a#title {
+  font-family: 'Lobster', sans-serif !important;
+  font-size: 45px !important;
+  transition: 0.5s;
+  &:after{
+    content: '®';
+    margin-left: 7px;
+    vertical-align: top;
+    font-size: 0.4em;
+  }
+}
+
+$sOrange: #EF5B2F;
+#header .right {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  list-style-type: none;
+  float: right;
+  text-transform: uppercase;
+  line-height: 65px;
+  font-size: 18px;
+  li {
+    position: relative;
+    float: left;
+    border-right: 1px solid #CCC;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*cursor: pointer;*/
+    &.active a {
+      font-weight: bold;
+      color: #E71646;
+    }
+    &.start {
+      background-color: $sOrange;
+      a { color: #FFF; }
+      &:hover{
+        background-color: lighten($sOrange, 10%);
+      }
+    }
+  }
+}
+
+/* active pictures */
+
+.TinyRow {
+  text-align: center;
+}
+
+#owlSection {
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#carousel {
+  .owl-item {
+    margin: 5px;
+  }
+  img {
+    width: 220px;
+    height: 130px;
+  }
+}
+
+/* song lists */
+
+.Song {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #EF00EF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  background-color: #EDEDC0;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.CDPic {
+  width: 60px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.SongInfo {
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+
+.FunctionList {
+  height: 60px;
+  width: 250px;
+  background-color: #E0D0E0;
+  float: right;
+}
+
+#topList img {
+  width: 60px;
+  height: 60px;
+}
+
+/* footer */
+
+$footerBC: #242424;
+$footerC: #BBB;
+footer {
+  /*opacity: 0;*/
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background-color: $footerBC;
+  a, p, h1, h2, h3 {
+    color: $footerC;
+  }
+  a {
+    font-size: 1.5em;
+  }
+  li {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.copy {
+  clear: both;
+}
+
+/* for responsive webpage */
+
+@media screen and (max-width: 1000px) {
+  #header .right li:not(.start){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #header .clock {
+    display: none;
+  }
+}
+
+
+.FooterMenuDiv {
+  float: left;
+}

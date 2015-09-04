@@ -1,3 +1,4 @@
+//primodial javascript & jQuery
 function syncClock() {
     var clock = document.querySelector("#header ul.clock a");
     var date = new Date().toLocaleDateString();
@@ -9,7 +10,10 @@ function syncClock() {
         console.log("cannot update clock.");
     }
 }
-setTimeout(syncClock, 500);
+
+$(document).ready(function() {
+  setTimeout(syncClock, 500);
+});
 
 window.onload = function() {
   var layzr = new Layzr({

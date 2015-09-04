@@ -1,16 +1,20 @@
-// var css = require('../css/back.css');
+// alternative methods to include stylesheets
+// require('/path/to/style.css');
+// require("!style!css!/path/to/style.css");
+// require('!style!css!sass!/path/to/style.scss');
+require('../style/basic.scss');
 
 var OwlPictures = require('./owlPictures.js');
 var SongList = require('./songList.js');
 var FooterMenus = require('./footerMenus.js');
-var Main = require('./main.js')
+var Main = require('./main.js');
 
 var list = [
   {name: "HI", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg"},
   {name: "JT", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicbb.jpg"},
   {name: "AF", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicaa.jpg"},
   {name: "CG", src:"http://7xjgb0.com1.z0.glb.clouddn.com/mongo-insert.png"},
-  {name: "ER", src:"http://7xjgb0.com1.z0.glb.clouddn.com/mongoindex.png"}
+  {name: "ER", src:"http://7xjgb0.com1.z0.glb.clouddn.com/mongoindex.png"},
 ];
 
 React.render(
@@ -21,7 +25,7 @@ React.render(
 //data from server
 var songs = [
   {
-    song: "Level5",
+    song: "Level5-hill",
     singer: "fripSide",
     pic: "http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicmaki.jpg"
   },
@@ -33,6 +37,11 @@ var songs = [
   {
     song: "opersing",
     singer: "AGT",
+    pic: "http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicmaki.jpg"
+  },
+  {
+    song: "osing",
+    singer: "AKG",
     pic: "http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicmaki.jpg"
   }
 ];

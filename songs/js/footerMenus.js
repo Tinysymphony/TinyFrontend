@@ -1,4 +1,5 @@
 /* Footer */
+
 var FooterMenu = React.createClass({
   render: function() {
     var items = this.props.items;
