@@ -1,13 +1,7 @@
-// alternative methods to include stylesheets
-// require('/path/to/style.css');
-// require("!style!css!/path/to/style.css");
-// require('!style!css!sass!/path/to/style.scss');
-require('../style/basic.scss');
 
-var OwlPictures = require('./owlPictures.js');
-var SongList = require('./songList.js');
-var FooterMenus = require('./footerMenus.js');
-var Main = require('./main.js');
+var OwlPictures = require('./react-models/owlPictures.js');
+var SongList = require('./react-models/songList.js');
+var FooterMenus = require('./react-models/footerMenus.js');
 
 var list = [
   {name: "HI", src:"http://7xjgb0.com1.z0.glb.clouddn.com/TinyPicll.jpg"},

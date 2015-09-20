@@ -1,4 +1,12 @@
 /* basic style */
+$orange: #EF5B2F;
+$pink: #E71646;
+$footerBC: #242424;
+$footerC: #BBB;
+$mainBlack: #333;
+
+$barHeight: 45px;
+$topHeight: 65px;
 
 @mixin roundBorder($radius: 5px) {
   -webkit-border-radius: $radius;
@@ -6,31 +14,107 @@
   border-radius: $radius;
 }
 
-$mainBlack: #333;
 body, p, a, h2, h3, h4, h5, h6 {
-    font-family: 'Cuprum', sans-serif;
-    color: $mainBlack;
+  font-family: 'Cuprum', sans-serif;
+  color: $mainBlack;
 }
 
 ul > li {
-    list-style: none;
-    transition: 0.5s
+  list-style: none;
+  transition: 0.5s
 }
 
 a {
-    text-decoration: none !important;
-    cursor: pointer;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
-div, img {
+div, img, figure {
   @include roundBorder();
+}
+
+#ting {
+  div{
+    position: relative;
+    background-color: #FFE6D9;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    // height: 800px;
+    overflow: hidden;
+    transition: 0.5s;
+    img {
+      transition: 0.5s;
+    }
+    figure {
+      transition: all 0.5s;
+      opacity: 1;
+    }
+    &:hover{
+      opacity: 0.8;
+      img.cover {
+        transform: rotate(-15deg);
+      }
+      ul.referButton {
+        transform: translate(0,0);
+      }
+      figcaption {
+        transform: scale(1.2, 1.2);
+      }
+      img.contentPicture {
+        transform: scale(1.1, 1.1);
+      }
+    }
+    img.contentPicture {
+      height: 100%;
+      width: 100%;
+    }
+    img.cover {
+      transform-origin: 0 0;
+      transition: 0.5s;
+      opacity: 0.9;
+      position: absolute;
+      top:100%;
+      height: 100%;
+      width: 200%;
+    }
+    figcaption {
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2em;
+      }
+      color: #fff;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      transition: 0.4s;
+    }
+    ul.referButton {
+      li{
+        margin-left: 20px;
+        float: left;
+        a {
+          font-size: 60px;
+        }
+      }
+      transition: 0.3s;
+      transform: translate(0, 100px);
+      transform-delay: 0.1s;
+      position: absolute;
+      right: 50px;
+      bottom: 10px;
+    }
+  }
 }
 
 /* navigation */
 
 nav.top {
-  height: 45px;
-  line-height: 45px;
+  height: $barHeight;
+  line-height: $barHeight;
   background-color: #FFF;
   padding-left: 60px;
   padding-right: 60px;
@@ -47,7 +131,6 @@ nav.top {
   }
   ul.clock {
     float: right;
-    line-height: 45px;
     a {
       font-family: 'Ubuntu Mono';
     }
@@ -55,9 +138,9 @@ nav.top {
 }
 
 nav.main {
-  height: 65px;
+  height: $topHeight;
   background-color: #DDD;
-  padding-left: 30px;
+  padding-left: 60px;
   border-style: solid none solid none;
   border-width: 1px;
   border-color: #CCC;
@@ -80,15 +163,13 @@ a#title {
   }
 }
 
-$sOrange: #EF5B2F;
 #header .right {
   position: absolute;
-  top: 45px;
+  top: $barHeight;
   right: 0;
-  list-style-type: none;
   float: right;
   text-transform: uppercase;
-  line-height: 65px;
+  line-height: $topHeight;
   font-size: 18px;
   li {
     position: relative;
@@ -96,18 +177,30 @@ $sOrange: #EF5B2F;
     border-right: 1px solid #CCC;
     padding-left: 20px;
     padding-right: 20px;
-    /*cursor: pointer;*/
     &.active a {
       font-weight: bold;
-      color: #E71646;
+      color: $pink;
     }
     &.start {
-      background-color: $sOrange;
-      a { color: #FFF; }
+      background-color: $orange;
+      a { color: white; }
       &:hover{
-        background-color: lighten($sOrange, 10%);
+        background-color: lighten($orange, 10%);
       }
     }
+  }
+}
+
+/* for responsive webpage */
+@media screen and (max-width: 1000px) {
+  #header .right li:not(.start){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #header .clock {
+    display: none;
   }
 }
 
@@ -124,12 +217,22 @@ $sOrange: #EF5B2F;
 }
 
 #carousel {
+  div.item {
+    height: auto;
+    width: auto;
+    // background-color: $pink;
+  }
   .owl-item {
     margin: 5px;
   }
   img {
     width: 220px;
     height: 130px;
+    transition: 0.5s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
 }
 
@@ -175,15 +278,14 @@ $sOrange: #EF5B2F;
 
 /* footer */
 
-$footerBC: #242424;
-$footerC: #BBB;
+
 footer {
   /*opacity: 0;*/
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
   bottom: 0;
-  position: absolute;
+  position: relative;
   background-color: $footerBC;
   a, p, h1, h2, h3 {
     color: $footerC;
@@ -201,21 +303,6 @@ footer {
 .copy {
   clear: both;
 }
-
-/* for responsive webpage */
-
-@media screen and (max-width: 1000px) {
-  #header .right li:not(.start){
-    display: none;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  #header .clock {
-    display: none;
-  }
-}
-
 
 .FooterMenuDiv {
   float: left;

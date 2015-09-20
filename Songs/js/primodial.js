@@ -1,4 +1,4 @@
-//primodial javascript & jQuery
+//primodial javascript
 function syncClock() {
     var clock = document.querySelector("#header ul.clock a");
     var date = new Date().toLocaleDateString();
@@ -11,11 +11,8 @@ function syncClock() {
     }
 }
 
-$(document).ready(function() {
-  setTimeout(syncClock, 500);
-});
-
 window.onload = function() {
+  setTimeout(syncClock, 500);
   var layzr = new Layzr({
   });
 }
